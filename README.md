@@ -1,28 +1,3 @@
-https://435562384942.signin.aws.amazon.com/console?region=us-east-1
-
-Whiz_User_104685.41685904
-
-a8e64dac-513a-4d46-a54d-d441fb2aa379
-
-AWSTemplateFormatVersion: '2010-09-09'
-Parameters:
-  VpcCIDR:
-    Description: CIDR block fortheVPC
-    Type: String
-    Default: "10.0.0.0/16" # Puedes cambiar este valor por defecto si quieres
-    AllowedPattern: "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})"
-    ConstraintDescription: Debe ser un rango CIDR válido (por ejemplo, 10.0.0.0/16)
-Resources:
-  MyVPC:
-    Type: AWS::EC2::VPC
-    Properties:
-      CidrBlock: !Ref VpcCIDR
-      EnableDnsSupport: true
-      EnableDnsHostnames: true
-      Tags:
-        - Key: Name
-          Value: MyVPC
-
 # Módulo 1: Introducción a AWS y Comparación con Azure
 
 - Visión general detallada de la infraestructura de AWS.
